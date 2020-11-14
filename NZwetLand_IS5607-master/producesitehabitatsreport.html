@@ -26,15 +26,15 @@
                         while (i < data.length){
                             siteHabitat1 = data[i];
                             $("#sitehabitat_report").append("<hr>" +
-                                " site habitat id : " + siteHabitat1.id +"<br>"+
-                                " | site habitat name: " + siteHabitat1.sitehabitatname +"<br>"+
-                                " | area: " + siteHabitat1.area+ "<br>" );
+                                " <b>Site Habitat ID :</b> " + siteHabitat1.id +"<br>"+
+                                " | <b>Site Habitat Name: </b>" + siteHabitat1.sitehabitatname +"<br>"+
+                                " | <b>Area:</b> " + siteHabitat1.area+ "<br>" );
 
                             sites = getSite(siteHabitat1.site);
                             k = 0;
                             while (k<sites.length){
                                 $("#sitehabitat_report").append(
-                                    " Site name: "+ sites[k].sitename+"<br>"
+                                    " <b>Site Name:</b> "+ sites[k].sitename+"<br>"
 
                                 );
                                 k = k + 1;
@@ -44,7 +44,7 @@
                             h=0;
                             while (h<habitats.length){
                                 $("#sitehabitat_report").append(
-                                    " habitat description : "+ habitats[h].description+"<br>"
+                                    " <b>Habitat Description :</b> "+ habitats[h].description+"<br>"
 
                                 );
                                 h = h + 1;

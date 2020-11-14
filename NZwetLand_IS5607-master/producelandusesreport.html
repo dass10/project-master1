@@ -11,56 +11,56 @@
     </script>
     <script>
         $(document).ready(function () {
-        $("#show_report").click(function () {
-            $.ajax({
-                type: 'Get',
-                dataType: 'JSON',
-                url: 'http://nzwetland.herokuapp.com/api/sitehabitatlanduse/',
-                success: function (data) {
-                    // location.reload();
+            $("#show_report").click(function () {
+                $.ajax({
+                    type: 'Get',
+                    dataType: 'JSON',
+                    url: 'https://nzwetland.herokuapp.com/api/sitehabitatlanduse/',
+                    success: function (data) {
+                        // location.reload();
 
-                    i = 0;
-                    while (i < data.length) {
-                        sitehabitatlanduse1 = data[i];
-                        $("#landuse_report").append("<hr>" +
-                            " <b>Impact:</b> " + sitehabitatlanduse1.impact );
-
-
-                        landuse=getlanduse(sitehabitatlanduse1.landuse);
-                        console.log('sitehabitatlanduse1',sitehabitatlanduse1)
-                        h=0;
-                        while (h<landuse.length){
+                        i = 0;
+                        while (i < data.length) {
+                            sitehabitatlanduse1 = data[i];
                             $("#landuse_report").append("<hr>" +
-                                " <b>landuse ID:</b> " + landuse[h].id + "<br>" +
-                                " <b>Description:</b> " + landuse[h].description + "<br>" +
-                                " <b>Impact:</b> " + sitehabitatlanduse1.impact + "<br>" +
-                                "<b>Landuse Type:</b>"     + landuse[h].landusetype + "<br>");
+                                " <b>Impact:</b> " + sitehabitatlanduse1.impact );
+
+
+                            landuse=getlanduse(sitehabitatlanduse1.landuse);
+                            console.log('sitehabitatlanduse1',sitehabitatlanduse1)
+                            h=0;
+                            while (h<landuse.length){
+                                $("#landuse_report").append("<hr>" +
+                                    " <b>landuse ID:</b> " + landuse[h].id + "<br>" +
+                                    " <b>Description:</b> " + landuse[h].description + "<br>" +
+                                    " <b>Impact:</b> " + sitehabitatlanduse1.impact + "<br>" +
+                                    "<b>Landuse Type:</b>"     + landuse[h].landusetype + "<br>");
                                 h=h+1;
+                            }
+
+
+
+
+                            sitehabitat=getsitehabitat1(sitehabitatlanduse1.sitehabitat);
+                            m = 0;
+                            while (m < sitehabitat.length) {
+                                $("#landuse_report").append(
+                                    " <b>Site Habitat ID:</b> " + sitehabitat[m].id + "<br>" +
+                                    " <b>Site Habitat Name:</b> " + sitehabitat[m].sitehabitatname + "<br>")
+
+                                m= m+1;
+                            }
+                            i = i + 1;
                         }
-
-
-
-
-                        sitehabitat=getsitehabitat1(sitehabitatlanduse1.sitehabitat);
-                        m = 0;
-                        while (m < sitehabitat.length) {
-                            $("#landuse_report").append(
-                                " <b>Site Habitat ID:</b> " + sitehabitat[m].id + "<br>" +
-                                " <b>Site Habitat Name:</b> " + sitehabitat[m].sitehabitatname + "<br>")
-
-                            m= m+1;
-                        }
-                        i = i + 1;
+                    },
+                    error: function (err) {
+                        console.log(err);
                     }
-                },
-                error: function (err) {
-                    console.log(err);
-                }
-            });
-        })
+                });
+            })
 
 
-    });
+        });
         function getsitehabitat1(siteHabitat){
             //return assessment objects
             siteHabitats = [];
@@ -68,7 +68,7 @@
                 type: 'Get',
                 dataType: 'JSON',
                 async:false,
-                url: 'http://nzwetland.herokuapp.com/api/Sitehabitat/',
+                url: 'https://nzwetland.herokuapp.com/api/Sitehabitat/',
                 success: function (data) {
                     // location.reload();
                     i = 0;
@@ -95,7 +95,7 @@
                 type: 'Get',
                 dataType: 'JSON',
                 async:false,
-                url: 'http://nzwetland.herokuapp.com/api/landuse/',
+                url: 'https://nzwetland.herokuapp.com/api/landuse/',
                 success: function (data) {
                     // location.reload();
                     i = 0;
@@ -116,16 +116,18 @@
             return landuses;
         }
 
-   </script>
+    </script>
 
+
+    <script src="js/script.js"></script>
+    <script src="js/getsinglescript.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <script src="../nzwetland1-origin-SHWETA/js/script.js"></script>
-    <script src="../nzwetland1-origin-SHWETA/js/getsinglescript.js"></script>
+
 </head>
 <body id="page8">
 <nav id="nav">
     <ul id="navigation">
-        <li><a href="homepage.html" class="first">Administrator Menu</a></li>
+        <li><a href="mainmenu.html" class="first">Main Menu</a></li>
         <li><a href="#">Site &raquo;</a>
             <ul>
                 <li><a href="addsite.html">Add Site</a></li>
@@ -147,7 +149,7 @@
                 <li><a href="addhabitat.html">Add Habitat</a></li>
                 <li><a href="updatehabitat.html">Update Habitat</a></li>
                 <li><a href="deletehabitat.html">Delete Habitat </a></li>
-                <li><a href="producehabitat.html">Produce Habitat Report </a></li>
+                <li><a href="producehabitatsreport.html">Produce Habitat Report </a></li>
             </ul></li>
 
         <li><a href="#">Landuse &raquo; </a>
@@ -159,54 +161,15 @@
                 <li><a href="deletelanduse.html">Delete Landuse</a></li>
                 <li><a href="producelandusesreport.html">Produce Landuses Report </a></li>
             </ul></li>
-        <ul id="navigation">
-            <li><a href="homepage.html" class="first">Administrator Menu</a></li>
-            <li><a href="#">Site &raquo;</a>
-                <ul>
-                    <li><a href="addsite.html">Add Site</a></li>
-                    <li><a href="updatesite.html">Update Site</a></li>
-                    <li><a href="deletesite.html">Delete Site</a>
-                    <li><a href="producesitereport.html">Produce Site Reports</a></li>
-
-                </ul>
-            </li>
-            <li><a href="#">Site Habitat &raquo;</a>
-                <ul>
-                    <li><a href="addsitehabitat.html">Add Site Habitat</a></li>
-                    <li><a href="removesitehabitat.html">Remove Site Habitat</a></li>
-                    <li><a href="producesitehabitatsreport.html">Produce Site Habitat Report</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Habitat &raquo; </a>
-                <ul>
-                    <li><a href="addhabitat.html">Add Habitat</a></li>
-                    <li><a href="updatehabitat.html">Update Habitat</a></li>
-                    <li><a href="deletehabitat.html">Delete Habitat </a></li>
-                    <li><a href="producehabitatsreport.html">Produce Habitat Report </a></li>
-                </ul></li>
-
-            <li><a href="#">Landuse &raquo; </a>
-                <ul>
-                    <li><a href="assignlanduse.html">Assign Landuse</a></li>
-                    <li><a href="removelanduse.html">Remove Landuse</a></li>
-                    <li><a href="addlanduse.html">Add Landuse</a></li>
-                    <li><a href="updatelanduse.html">Update Landuse</a></li>
-                    <li><a href="deletelanduse.html">Delete Landuse</a></li>
-                    <li><a href="producelandusesreport.html">Produce Landuses Report </a></li>
-                </ul></li>
-
-
-
-
-
-        </ul>    </ul>
+        <button id="logoutBut" >Log out</button>
+    </ul>
 </nav><br><br><br><br><br>
 
-<button id="show_report">DISPLAY LAND USE REPORT</button>
+<button id="show_report">Display Land use report</button>
 <div id="landuse_report" style="width: 100px;width: 700px;background-color: whitesmoke ">
 </div>
-<button type="button" ><a href="homepage.html"> RETURN</a></button><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<button type="button" ><a href="mainMenu.html"> Return</a></button><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <div id="footer">
     Copyright @ 2020 By Nz Wetland Group, Unitec, New Zealand.
