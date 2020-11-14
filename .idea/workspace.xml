@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8560d316-9ea0-4d46-8288-5e7efb9c7986" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZwetLand_IS5607-master/producelandusesreport.html" beforeDir="false" afterPath="$PROJECT_DIR$/NZwetLand_IS5607-master/producelandusesreport.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NZwetLand_IS5607-master/producesitehabitatsreport.html" beforeDir="false" afterPath="$PROJECT_DIR$/NZwetLand_IS5607-master/producesitehabitatsreport.html" afterDir="false" />
-    </list>
+    <list default="true" id="8560d316-9ea0-4d46-8288-5e7efb9c7986" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,7 +48,7 @@
       <updated>1605242382231</updated>
       <workItem from="1605242383316" duration="7679000" />
       <workItem from="1605344790261" duration="1231000" />
-      <workItem from="1605346082343" duration="5512000" />
+      <workItem from="1605346082343" duration="6259000" />
     </task>
     <servers />
   </component>
