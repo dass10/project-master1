@@ -53,7 +53,13 @@
                         window.location.href = "homepage.html";
                     }
                 },
+                error: function (err) {
+                    console.log(err);
+                    errors = JSON.parse(err.responseText);
+                    $("#landuse_description_err").text(errors.description)
+                    $("#landuse_type_err").text(errors.landusetype)
 
+                }
 
             });
 
