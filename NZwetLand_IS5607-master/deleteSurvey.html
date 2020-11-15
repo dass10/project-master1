@@ -50,8 +50,8 @@
                     dataType: 'JSON',
                     url: 'https://nzwetland.herokuapp.com/api/Survey/'+deleteSurvey,
                     success: function (data) {
-                        alert('Assignment  removed successfully');
-                        if (confirm(' delete another survey?')) {
+                        alert('Survey  removed successfully');
+                        if (confirm(' Remove another survey?')) {
                             location.reload();}
                         else{
                             console.log("");
@@ -134,7 +134,7 @@
         </form>
 
 
-            <button id="delete_but">DELETE SURVEY</button>
+            <button id="delete_but">DELETE </button>
             <button><a href="homepage.html">RETURN</a></button>
 
 

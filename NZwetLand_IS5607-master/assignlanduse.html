@@ -63,7 +63,7 @@
         $.ajax({
             type: 'Get',
             dataType: 'JSON',
-            url: 'http://nzwetland.herokuapp.com/api/landuse/',
+            url: 'https://nzwetland.herokuapp.com/api/landuse/',
             success: function (data) {
                 // location.reload();
 
@@ -101,14 +101,14 @@
                 $.ajax({
                     type: 'POST',
                     dataType: 'JSON',
-                    url: 'http://nzwetland.herokuapp.com/api/landuse/',
+                    url: 'https://nzwetland.herokuapp.com/api/landuse/',
                     data: {
                         description: lanusedescription,
                         landusetype: landusetype1,
 
                         success: function (data) {
                             alert('Land use Assigned successfully');
-                            if (confirm(' Add another land use?')) {
+                            if (confirm(' Assign another land use?')) {
                                 location.reload();}
                             else{
                                 console.log("");

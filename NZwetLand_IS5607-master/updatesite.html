@@ -107,7 +107,7 @@
                     },
                     success: function (data) {
                         alert("Site updated successfully")
-                        if (confirm('Do you want to update another site?')) {
+                        if (confirm(' Update another site?')) {
                             location.reload();}
                         else{
                             console.log("");
@@ -195,7 +195,7 @@
 
 
 <form onsubmit ="return false">
-    <div class="center"style="background-color: whitesmoke, darkolivegreen">
+    <div class="center">
         <h1>UPDATE SITE</h1>
 
 
@@ -210,7 +210,7 @@
         <p id="area_input_err"></p>
         <p> <label>Altitude:</label><input id = "site_altitude" type = "number" maxlength="50" size="50"></p>
         <p id="altitude_input_err"></p>
-        <p> <label>Site Type:</label><select id = "site_sitetype"></p>
+        <p> <label>Site Type:</label><select id = "site_sitetype"></select></p>
         <option>Strict Nature Reserve</option>
         <option>National Park</option>
         <option>Wildlife Reserve</option>
@@ -219,7 +219,7 @@
         </select></p>
         <p id = "sitetype_input_err"></p>
 
-        <p> <label>Status:</label><td ><select id = "site_status"></p>
+        <p> <label>Status:</label><td ><select id = "site_status"></select></p>
         <option>Normal</option>
         <option>Threatend</option>
 

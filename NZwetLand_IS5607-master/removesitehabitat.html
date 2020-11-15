@@ -111,8 +111,8 @@
                     dataType: 'JSON',
                     url: 'https://nzwetland.herokuapp.com/api/Sitehabitat/' + sitehabitatID,
                     success: function (data) {
-                        alert('Site Habitat has been successfully removed.');
-                        if (confirm('Do you want to remove another site habitat?')) {
+                        alert('Site Habitat removed successfully .');
+                        if (confirm('Remove another site habitat?')) {
                             location.reload();}
                         else{
                             console.log("");

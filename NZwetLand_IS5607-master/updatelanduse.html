@@ -14,7 +14,7 @@
             $.ajax({
                 type: 'Get',
                 dataType: 'JSON',
-                url: 'http://nzwetland.herokuapp.com/api/landuse/',
+                url: 'https://nzwetland.herokuapp.com/api/landuse/',
                 success: function (data) {
                     // location.reload();
 
@@ -41,7 +41,7 @@
                 $.ajax({
                     type: 'Get',
                     dataType: 'JSON',
-                    url: 'http://nzwetland.herokuapp.com/api/landuse/'+landuse_id+'/',
+                    url: 'https://nzwetland.herokuapp.com/api/landuse/'+landuse_id+'/',
                     success: function (data) {
                         // location.reload();
                         $("#landuse_id").val(data.id);
@@ -72,7 +72,7 @@
                 $.ajax({
                     type: 'PUT',
                     dataType: 'JSON',
-                    url: 'http://nzwetland.herokuapp.com/api/landuse/'+ updatelanduse+'/',
+                    url: 'https://nzwetland.herokuapp.com/api/landuse/'+ updatelanduse+'/',
                     data:{
                         "description":description,
                         "landusetype":landusetype,

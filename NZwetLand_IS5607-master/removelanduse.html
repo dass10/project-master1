@@ -81,8 +81,8 @@
                     dataType: 'JSON',
                     url: 'https://nzwetland.herokuapp.com/api/sitehabitatlanduse/'+deletelanduse,
                     success: function (data) {
-                        alert('  removed successfully');
-                        if (confirm('Do you want to remove another landuse?')) {
+                        alert('  Landuse removed successfully');
+                        if (confirm(' Remove another landuse?')) {
                             location.reload();
                         } else {
                             console.log("");
