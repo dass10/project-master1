@@ -57,6 +57,9 @@
                     }
                     $("#site_id_input").change(function () {
                         siteID = $("#site_id_input").val()
+
+                        $("#sitehabitat_id_input").empty();
+                        $("#sitehabitat_id_input").append("<option value =''>Select one</option>");
                         getSiteInfo(siteID);
                     });
                 },

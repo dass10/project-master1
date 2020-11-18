@@ -404,18 +404,19 @@ td{
 /*mainmenu and homepage*/
 /*main menu*/
 #page10 div {
-    width: 320px;
+    width: 30%;
     height: fit-content;
     background: linear-gradient(to right, whitesmoke, darkolivegreen);
     box-shadow: 0 0 20px 9px olivedrab;
     font-family: "Bookman Old Style";
     text-align: center;
     font-size: small;
-    margin: 40px auto;
-    padding: inherit;
+    margin: 30px auto;
+    margin-left: 40px;
+    margin-right: 60px;
+    padding: 0;
     border-radius: 20px;
-    display: inline-table;
-    flex-flow: inherit;
+  display: inline-block;
 
 }
 
@@ -423,7 +424,7 @@ td{
 #page10   input {
     font-family: "Bookman Old Style";
     text-align: center;
-    width: 400px;
+    width: 30%;
     margin: 40px auto;
     padding: 5px;
     height: fit-content;
@@ -446,11 +447,7 @@ td{
     color:   Black;
     box-shadow: 0 0 20px 9px whitesmoke;
 }
-/*h6 {*/
-/*    text-align: center;*/
-/*    font-family: "Bookman Old Style";*/
-/*    box-shadow: 0 0 20px 9px whitesmoke*/
-/*}*/
+
 #page10 #footer{
     font-family: "Bookman Old Style";
     box-shadow: 0 0 20px 9px whitesmoke;
