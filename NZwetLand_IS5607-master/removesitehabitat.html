@@ -65,6 +65,7 @@
                 }
             });
 
+
             function getSiteInfo(SiteID) {
                 $.ajax({
                     type: 'Get',
@@ -96,6 +97,7 @@
                             $("#sitehabitat_id_input").append("<option value='" + sitehabitat.id + "'>" + sitehabitat.id + " " + sitehabitat.sitehabitatname + " " + habitat.description + "</option>");
                             i = i + 1;
                         }
+                        $("#siteHabitat_id_input").empty();
                     });
 
                 },
