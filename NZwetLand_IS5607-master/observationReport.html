@@ -22,7 +22,7 @@
                         i = 0;
                         while (i < data.length){
                             observation1 = data[i];
-                            $("#habitat_report").append("<hr>" +
+                            $("#report").append("<hr>" +
                                 " <b>Observation date :</b> " + observation1.observationdate +"<br>"+
                                 " | <b>Observation number:</b> " + observation1.observationnumber +"<br>"+
                                 " | <b>Status: </b>" + observation1.status+ "<br>" );
@@ -30,7 +30,7 @@
                             animals = getanimal(observation1.animal);
                             k = 0;
                             while (k<animals.length){
-                                $("#habitat_report").append(
+                                $("#report").append(
                                     " <b>Animal genus name :</b> "+ animals[k].genusname+"<br>"+
                                     " <b>Animal species name :</b> "+ animals[k].speciesname+"<br>"
                                 );
@@ -40,7 +40,7 @@
                             surveys = getsurvey(observation1.survey);
                             h=0;
                             while (h<surveys.length){
-                                $("#habitat_report").append(
+                                $("#report").append(
                                     " survey name : "+ surveys[h].surveyname+"<br>"
 
                                 );
@@ -50,7 +50,7 @@
                             sitehabitats = getsitehabitat(observation1.sitehabitat);
                             m=0;
                             while (m<sitehabitats.length){
-                                $("#habitat_report").append("<hr>"+
+                                $("#report").append("<hr>"+
                                     " <b>Site habitat name :</b> "+ sitehabitats[m].sitehabitatname
 
                                 );
@@ -175,7 +175,7 @@
 
 
     <button id="show_report">DISPLAY OBSERVATION REPORT</button>
-<div id = "habitat_report" class="container">
+<div id = "report" class="container">
 
 
 </div>
