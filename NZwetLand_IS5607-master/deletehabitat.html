@@ -68,13 +68,11 @@
 
 
 
-
-    <script src="../nzwetland1-origin-SHWETA/js/script.js"></script>
-
+    <link rel="stylesheet" href="mylesstyle.css">
     <script src="../nzwetland1-origin-SHWETA/js/getsinglescript.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+
 </head>
-<body id="page1">
+<body id="page15">
 <nav id="nav">
     <ul id="navigation">
         <li><a href="homepage.html" class="first">Administrator Menu</a></li>
@@ -121,46 +119,45 @@
 <div class="container">
 
 
-        <form onsubmit="return false">
-            <div class="div_deletehabitat">
-                <h1>Delete Habitat</h1>
-                <p><label> Habitat: </label>
-                    <select id="habitat_id_input">
-                        <option value="">Select one</option>
-                    </select>
-                </p>
-                <table>
+    <form onsubmit="return false">
+        <div class="div_deletehabitat">
+            <h1>Delete Habitat</h1>
+            <p><label> Habitat: </label>
+                <select id="habitat_id_input">
+                    <option value="">Select one</option>
+                </select>
+            </p>
+            <table>
+                <tr>
+                    <td>Habitat ID:</td>
+                    <td id="habitat_id"></td>
+                </tr>
+                <tr>
+                    <td>Description:</td>
+                    <td id="habitat_description"></td>
+                </tr>
+                <tr>
+                    <td>Habitat Type:</td>
+                    <td id="habitat_habitattype"></td>
+                </tr>
 
-                        <p><lable>Habitat ID:</lable>
-                        <input id="habitat_id"></p>
+            </table>
+            <header class="div_but" style="text-align: center">
+
+                <button id="delete_but">DELETE HABITAT</button>
+                <button type="button"><a href="homepage.html"> RETURN</a></button>
+            </header>
+        </div>
+
+    </form>
 
 
-                        <p><label>Description:</label>
-                        <input id="habitat_description" type = "text" maxlength="40" size="40"></p>
-
-
-                    <p><label>Habitat Type:</label>
-                        <input id="habitat_habitattype"type = "text" maxlength="30" size="30"></p>
-
-
-                </table>
-                <header class="div_but" style="text-align: center">
-
-                    <button id="delete_but">DELETE </button>
-                    <button type="button"><a href="homepage.html"> RETURN</a></button>
-                </header>
-            </div>
-
-        </form>
-
-
-    </div><br><br>
+</div><br><br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+
+
+
 
 <div id="footer">
     Copyright @ 2020 By Nz Wetland Group, Unitec, New Zealand.
